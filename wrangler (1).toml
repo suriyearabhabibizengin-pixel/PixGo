@@ -1,0 +1,15 @@
+name = "pixgo-server"
+main = "worker.js"
+compatibility_date = "2025-06-01"
+
+[vars]
+# Oyuna girmesine izin verilen sitelerin adresleri (virgülle ayır).
+ALLOWED_ORIGINS = "https://suriyearabhabibizengin-pixel.github.io"
+
+[[durable_objects.bindings]]
+name = "ROOM"
+class_name = "Room"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Room"]
